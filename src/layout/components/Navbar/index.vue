@@ -7,12 +7,14 @@
     />
     <Breadcrumb class="breadcrumb" />
     <div class="right-menu">
+      <HeaderSearch class="right-menu-item" />
+      <Screenfull class="right-menu-item hover-effect" />
       <el-dropdown class="avatar-container right-menu-item hover-effect">
 
         <div class="avatar-wrapper">
           <el-avatar
             :icon="UserFilled"
-            :size="30"
+            :size="40"
           />
           <span>{{ userStore.name }}</span>
         </div>
@@ -41,6 +43,8 @@
 <script lang="ts" setup>
 import Breadcrumb from "../Breadcrumb/index.vue";
 import Hamburger from "../Hamburger/index.vue";
+import Screenfull from "@/components/Screenfull/index.vue";
+import HeaderSearch from "@/components/HeaderSearch/index.vue";
 import { UserFilled } from "@element-plus/icons-vue";
 import { useUserStore } from "@/store/user";
 import { useAppStore } from "@/store/app";

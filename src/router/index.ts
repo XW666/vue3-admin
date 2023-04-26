@@ -81,6 +81,18 @@ export const constantRoutes: Array<RouteRecordRaw> = [
       }
     ]
   },
+  {
+    path: '/from',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'from',
+        component: () => import(/* webpackChunkName: "from" */ "../views/from/index.vue"),
+        meta: { title: 'from', icon: 'TrendCharts', noCache: true }
+      }
+    ]
+  },
 
 
 ]
