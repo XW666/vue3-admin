@@ -7,8 +7,10 @@
     />
     <Breadcrumb class="breadcrumb" />
     <div class="right-menu">
-      <HeaderSearch class="right-menu-item" />
-      <Screenfull class="right-menu-item hover-effect" />
+      <template v-if="appStore.sidebar.device !== 'mobile'">
+        <HeaderSearch class="right-menu-item" />
+        <Screenfull class="right-menu-item hover-effect" />
+      </template>
       <el-dropdown class="avatar-container right-menu-item hover-effect">
 
         <div class="avatar-wrapper">

@@ -22,6 +22,7 @@
 import { computed } from "vue";
 import { useAppStore } from "../store/app";
 import { AppMain, Sidebar, TagsView, Navbar } from "./components";
+import useResize from "./hooks/useResize";
 const appStore = useAppStore();
 const classObj = computed(() => {
   return {
@@ -31,7 +32,7 @@ const classObj = computed(() => {
     mobile: appStore.sidebar.device === "mobile",
   };
 });
-
+useResize();
 const handleClickOutside = () => {
   appStore.closeSidebar(false);
 };
